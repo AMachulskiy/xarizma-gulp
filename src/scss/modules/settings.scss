@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+@import url(../../fonts/x-icons/style.css);
+
+/* Colors */
+$back-color: #191b20;
+$text-color: #ffffff;
+$accent-text-color: #f69020;
+$icons-back-color: #242527;
+$icons-fcolor: #5c616d;
+
+$main__content-footer-item_light: #282b32;
+$main__content-footer-item_dark: #202124;
+
+$third__card--light: #282b32;
+$third__card--dark: #202124;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  color: $text-color;
+}
+
+/* DEVICE Width */
+$desktop1700: 1700px;
+$desktop1500: 1500px;
+$desktop: 1200px;
+$notebook: 992px;
+$tablet: 768px;
+$mobile: 576px;
+$mobile_s: 420px;
+
+@mixin desktop1700 {
+  @media (max-width: $desktop1700) {
+    @content;
+  }
+}
+@mixin desktop1500 {
+  @media (max-width: $desktop1500) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (max-width: $desktop) {
+    @content;
+  }
+}
+@mixin notebook {
+  @media (max-width: $notebook) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media (max-width: $mobile) {
+    @content;
+  }
+}
+@mixin mobile_s {
+  @media (max-width: $mobile_s) {
+    @content;
+  }
+}

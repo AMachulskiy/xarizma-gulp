@@ -1,0 +1,74 @@
+section.main
+  .main__header
+    .main__header-logo
+      img(src='/img/logo.svg' alt='XARIZMA logo')
+    .main__header-contact
+      .main__header-contact-content
+        .main__header-contact-icon
+          i.x_tel.icons
+        .main__header-contact-text +38 (097) 970-90-90
+      .main__header-contact-content
+        .main__header-contact-icon
+          i.x_loc.icons
+        .main__header-contact-text.accent_text_color м. Лубянка
+    .main__header-btns
+      .main__header-btn Наши залы
+      .main__header-btn Забронировать
+
+    #mobile-menu-btn.main__mobile-menu-btn
+      img(src="/src/img/mobile-menu/open-menu.svg" alt="m-menu-open")
+    #mobile-menu.main__mobile-menu
+      .main__mobile-menu-head
+        img.main__mobile-menu-head-logo(src='/img/logo.svg' alt='XARIZMA logo')
+        img.main__mobile-menu-head-btn(src="/src/img/mobile-menu/close-menu.svg" alt="m-menu-close")
+      .main__mobile-menu-wrap
+        .main__header-contact-content
+          .main__header-contact-icon
+            i.x_tel.icons
+          .main__header-contact-text +38 (097) 970-90-90
+        .main__header-contact-content
+          .main__header-contact-icon
+            i.x_loc.icons
+          .main__header-contact-text.accent_text_color м. Лубянка
+        .main__header-btns
+          .main__header-btn Наши залы
+          .main__header-btn Забронировать
+
+  .main__content
+    .main__content-desc
+      h2.main__content-desc-txt Арендуй Караоке-Зал до 10 человек
+      h1.main__content-desc-title возьми алкоголь и еду с собой
+        span.main__content-desc-title-com м. Лубянка
+      .main__content-vars
+        -
+          const vars = [
+            'Если хочешь попеть и оторваться',
+            'Отдохнуть после работы',
+            'Хорошо провести время'
+          ]
+        each title in vars
+          .main__content-var
+            .main__content-var-icon
+              img(src='/img/main/var_check.svg' alt='check-img')
+            span= title
+
+      .button-orange Забронировать онлайн
+    img.main-birka(src='/img/illustration/main-birka.svg' alt='main-birka')
+    img.main-illustration(src='/img/illustration/main-illustration.png' alt='main-illustration')
+    .main__content-social
+      .main__content-social-fill
+        img.main__content-social-icon(src='/img/social/telegram.svg' alt='telegram')
+      .main__content-social-txt Связаться с нами
+  .main__content-footer
+    -
+      const footerItems = [
+        { title: 'Профессиональное караоке AST-50', img: 'icons_micro' },
+        { title: 'Без пробкового сбора', img: 'icons_champagne_bottle' },
+        { title: 'Без депозита', img: 'icons_cash' },
+        { title: 'Скидка в День Рождения', img: 'icons_confetti' }
+      ]
+    each footerItem, idx in footerItems
+      .main__content-footer-item(class=`${idx % 2 == 0  ? 'main__content-footer-item_light' : 'main__content-footer-item_dark'}` alt='arrow')
+        .main__content-footer-img
+          img(src=`/img/main/${footerItem.img}.svg` alt=`${footerItem.img}`)
+        .main__content-footer-desc= footerItem.title

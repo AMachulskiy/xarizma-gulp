@@ -1,0 +1,116 @@
+.chatbot {
+  background: url(/img/background/4-block.png) center;
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 112px 50px 72px 48px;
+    @include notebook {
+      padding: 64px 8px 0px 24px;
+    }
+  }
+  &__title {
+    font-weight: 900;
+    font-size: 75px;
+    line-height: 82px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    @include desktop {
+      margin-bottom: 32px;
+    }
+    @include mobile {
+      font-size: 36px;
+      line-height: 42px;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 32px;
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+  &__controls {
+    display: flex;
+    align-items: center;
+    @include desktop {
+      display: none;
+    }
+
+    &_adaptive {
+      display: none;
+      @include desktop {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+  &__slider {
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 350px;
+    grid-gap: 12px;
+    position: relative;
+    left: 0;
+    padding: 30px 0px 64px 16px;
+    transition: all 0.3s ease-in-out;
+    @include notebook {
+      padding: 32px 0px 32px 16px;
+    }
+    &-wrap {
+      overflow: hidden;
+    }
+  }
+  &__slide {
+    position: relative;
+
+    &-number {
+      position: absolute;
+      top: -30px;
+      right: 80px;
+      z-index: 1;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      background-color: #f69020;
+      opacity: 0;
+    }
+    &-frame {
+      position: absolute;
+      top: 0;
+      left: -17px;
+      opacity: 0;
+    }
+    &-desc {
+      display: flex;
+      align-items: center;
+      max-width: 10vw;
+      margin-top: 38px;
+    }
+    &-icon {
+      padding-right: 8px;
+    }
+    &-text {
+      font-weight: 300;
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.03em;
+    }
+    &--active .chatbot__slide-number,
+    &--active .chatbot__slide-frame {
+      opacity: 1;
+    }
+  }
+}
+.slider-pagin {
+  padding: 0px 16px 0px 16px;
+}
+.slide-num {
+  font-size: 24px;
+}

@@ -1,0 +1,17 @@
+@import 'modules/settings.scss';
+@import 'modules/uiElem.scss';
+@import 'modules/main.scss';
+@import 'modules/halls.scss';
+@import 'modules/privilage.scss';
+@import 'modules/chatbot.scss';
+@import 'modules/about.scss';
+@import 'modules/footer.scss';
+
+.all__page-background {
+  background-color: $back-color;
+}
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: $back-color;
+}

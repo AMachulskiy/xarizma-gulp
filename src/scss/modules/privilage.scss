@@ -1,0 +1,189 @@
+.privilege {
+    overflow: hidden;
+    display: flex;
+    flex-grow: 1;
+    background: url(/img/background/3-block.png) center;
+    position: relative;
+    @include notebook {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    &__left {
+        padding: 100px 0px 64px 48px;
+        position: relative;
+        z-index: 1;
+        @include notebook {
+            padding: 64px 16px 0px 48px;
+        }
+        @include tablet {
+            padding: 64px 8px 0px 24px;
+        }
+        @include mobile_s {
+            padding: 64px 8px 0px 16px;
+        }
+    }
+    &__title {
+        font-weight: 900;
+        font-size: 75px;
+        line-height: 82px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        @include desktop {
+            font-size: 48px;
+            line-height: 62px;
+        }
+        @include mobile {
+            font-size: 36px;
+            line-height: 48px;
+        }
+        @include mobile_s {
+            max-width: 300px;
+        }
+    }
+    &__subtitle {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 48px;
+        letter-spacing: 0.03em;
+        text-transform: uppercase;
+        padding: 32px 0px 48px 0px;
+        @include desktop {
+            font-size: 28px;
+            line-height: 23px;
+        }
+        @include mobile {
+            font-size: 22px;
+            line-height: 23px;
+        }
+    }
+    &__cards {
+        max-width: 1330px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 2vh;
+        @include desktop {
+            grid-gap: 1vh;
+        }
+        @include mobile {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+        }
+    }
+    &__card {
+        padding: 48px;
+        @include desktop {
+            padding: 20px;
+        }
+        @include mobile_s {
+            padding: 8px;
+        }
+
+        &--light {
+            background-color: $third__card--light;
+        }
+        &--dark {
+            background-color: $third__card--dark;
+        }
+        &-img {
+            height: 80px;
+            width: 80px;
+            @include tablet {
+                height: 40px;
+                width: 40px;
+            }
+        }
+        &-title {
+            font-weight: 800;
+            font-size: 18px;
+            line-height: 24px;
+            letter-spacing: 0.05em;
+            margin-top: 30px;
+            @include tablet {
+                font-size: 14px;
+                line-height: 18px;
+                margin-top: 18px;
+            }
+        }
+        &-list {
+            font-weight: 200;
+            font-size: 14px;
+            line-height: 15px;
+            letter-spacing: 0.03em;
+            margin-top: 16px;
+            padding-left: 25px;
+            position: relative;
+            @include desktop {
+                line-height: 16px;
+                margin-top: 12px;
+            }
+            @include tablet {
+                font-size: 13px;
+                line-height: 14px;
+                padding-left: 24px;
+            }
+                &::before {
+                content: '\2713';
+                color: $accent-text-color;
+                border: 1px solid $accent-text-color;
+                border-radius: 50%;
+                height: 13px;
+                width: 13px;
+                position: absolute;
+                top: 0;
+                margin-left: -25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        } 
+    }
+    &__right {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        align-items: flex-end;
+        padding: 0px 128px 64px 128px;
+        @include desktop1700 {
+            padding: 0px 64px 0px 64px;
+        }
+        @include desktop {
+            padding: 0px 32px 0px 32px;
+        }
+        @include notebook {
+            justify-content: center;
+            padding: 64px 64px 64px 64px;
+        }
+    }
+    &-illustration {
+        max-width: 100%;
+        position: absolute;
+        top: 150px;
+        right: 0;
+        @include desktop1700 {
+            right: -70px;
+        }
+        @include desktop1500 {
+            top: 300px;
+        }
+        @include desktop {
+            top: 150px;
+        }
+        @include notebook {
+            width: 70%;
+            top: 500px;
+            right: 0;
+        }
+        @include tablet {
+            width: 50%;
+            top: 800px;
+            right: 300px;
+        }
+        @include mobile {
+            top: 800px;
+            right: 200px;
+        }
+    }
+}

@@ -1,0 +1,55 @@
+section.about
+  .about__desc
+    h1.about__title.title Вопросы и ответы
+    h2.about__subtitle.subtitle Мы подготовили ответы на часто задаваемые вопросы
+  .about__wrap
+    .about__questions
+      -
+        const questions = [
+          {
+            title: 'Какое у вас караоке?',
+            text: ['Более 50,000 студийных фонограмм. Из них 80% - оригинальные минусовки в качестве PRO (mp3 - WAV).',
+            'Ежемесячное обновления репертуара.',
+            'Более 10,000 специальных фонограмм в сопровождении оригинальных видеоклипов.']
+          },
+          {
+            title: 'Есть ли у вас английские песни?',
+            text: ['Да, в репертуаре есть английские песни.']
+          },
+          {
+            title: 'Можно ли подключить телефон?',
+            text: ['Да, в репертуаре есть английские песни.']
+          },
+          {
+            title: 'Сколько микрофонов в каждом зале?',
+            text: ['Да, в репертуаре есть английские песни.']
+          },
+          {
+            title: 'Есть ли оплата картой?',
+            text: ['Да, в репертуаре есть английские песни.']
+          },
+          {
+            title: 'Можно приность с собой алкоголь и еду?',
+            text: ['Да, в репертуаре есть английские песни.']
+          },
+          {
+            title: 'Как расчитывается стоимость?',
+            text: ['Да, в репертуаре есть английские песни.']
+          },
+        ]
+      each question, id in questions
+        .about__questions-item(class=`${id == 0  ? 'about__questions-item_open' : ''}`)
+          .about__questions-title
+            .about__questions-title-h= question.title
+            .about__questions-title-btn
+              i.x_arrow
+          .about__questions-text
+            each txt in question.text
+              p= txt
+    .about__us
+      .about__us-text
+        | В нашем заведении Бельгийский ковролин. На входе выдают 
+        span.accent-color индивидуально запакованные тапочки,
+        |  в которые необходимо переобуться.
+      .button-orange Забронировать зал
+  img.about__illustration(src='/img/about/about-illustration.png' alt='about-illustration')

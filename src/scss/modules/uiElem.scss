@@ -1,0 +1,109 @@
+/* ELEMENTS */
+.contact {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact:not(:last-child) {
+  margin-right: 60px;
+}
+.contact__icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  background-color: $icons-back-color;
+}
+.contact-txt {
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 15px;
+  letter-spacing: 0.03em;
+}
+.title {
+  font-weight: 900;
+  font-size: 75px;
+  line-height: 82px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  @include desktop {
+    font-size: 48px;
+    line-height: 62px;
+  }
+}
+.subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 48px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  @include desktop {
+    font-size: 28px;
+    line-height: 23px;
+  }
+  @include mobile {
+    line-height: 32px;
+  }
+}
+.button-orange {
+  cursor: pointer;
+  height: 70px;
+  width: 270px;
+  border-radius: 60px;
+  background: linear-gradient(93.25deg, #ea422a 0%, #f69020 48.58%, #ffc619 101.38%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #252121;
+  @include mobile {
+    width: 220px;
+    height: 50px;
+    font-size: 12px;
+  }
+}
+
+/* COLORS */
+.accent-color {
+  color: $accent-text-color;
+}
+.accent_text_color {
+  color: $accent-text-color;
+}
+
+/* Круглые кнопки управления слайдерами */
+.slider-control {
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  border: 2px solid #282b32;
+  color: #606571;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 600;
+  &.disable {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+  &:hover {
+    cursor: pointer;
+    background-color: #2e3441;
+    color: #ffffff;
+  }
+}
+/* Иконки */
+.icons {
+  font-size: 24px;
+  color: $icons-fcolor;
+  &:hover {
+    color: $accent-text-color;
+  }
+}

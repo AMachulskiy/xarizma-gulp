@@ -1,0 +1,121 @@
+.about {
+  position: relative;
+  background: url(/img/background/5-block.png) center;
+
+  &__desc {
+    padding: 122px 50px 50px 48px;
+    position: relative;
+    z-index: 1;
+    @include notebook {
+      padding: 64px 50px 50px 50px;
+    }
+  }
+  &__wrap {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    padding-bottom: 130px;
+    @include desktop {
+      padding-bottom: 64px;
+    }
+    @include notebook {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: 1fr 1fr;
+      padding-right: 16px;
+      padding-bottom: 32px;
+    }
+  }
+  &__questions {
+    max-width: 1200px;
+    position: relative;
+    margin-left: 48px;
+    z-index: 1;
+
+    &-text {
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 31px;
+      letter-spacing: 0.03em;
+      color: #c5c5c5;
+      overflow: hidden;
+      max-height: 0;
+      padding: 0;
+    }
+    &-item_open .about__questions-text {
+      max-height: 800px;
+      padding: 0px 16px 16px 16px;
+      transition: all 0.3s ease-in-out;
+    }
+    &-item_open .about__questions-title-btn i {
+      color: #606571;
+      transform: rotate(0deg);
+      transition: all 0.5s ease-in-out;
+    }
+    &-title {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background-color: #282b32;
+      cursor: pointer;
+      margin-bottom: 16px;
+      &:hover {
+        background-color: #343740;
+      }
+      &-h {
+        font-weight: 800;
+        font-size: 18px;
+        line-height: 24px;
+        letter-spacing: 0.03em;
+        margin-left: 25px;
+      }
+      &-btn {
+        width: 43px;
+        height: 43px;
+        background-color: #34373f;
+        box-shadow: 0px 9px 16px rgba(0, 0, 0, 0.21);
+        margin: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+      }
+      &-btn i {
+        color: #ffc619;
+        transform: rotate(180deg);
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+  &__us {
+    max-width: 20vw;
+    margin-left: 78px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    @include desktop {
+      margin-left: 32px;
+    }
+    @include notebook {
+      max-width: 70vw;
+      margin-left: 0px;
+      padding: 64px 48px;
+    }
+    @include mobile {
+      padding: 32px 24px;
+    }
+    &-text {
+      font-weight: 900;
+      font-size: 32px;
+      line-height: 52px;
+      letter-spacing: 0.03em;
+    }
+  }
+  &__illustration {
+    max-width: 50vw;
+    position: absolute;
+    right: 0;
+    bottom: 200px;
+  }
+}

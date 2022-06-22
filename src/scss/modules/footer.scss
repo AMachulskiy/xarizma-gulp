@@ -1,0 +1,55 @@
+.footer {
+  background-image: url(/img/background/footer-block.png);
+  background-position: center;
+  &__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 100px 48px 100px 48px;
+    @include desktop {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 64px 48px 64px 48px;
+    }
+    @include mobile {
+      padding: 32px 48px 32px 24px;
+    }
+  }
+  &__logo {
+    margin-right: 64px;
+  }
+  &__logo img {
+    @include mobile {
+      @include mobile {
+        width: 182px;
+      }
+    }
+  }
+  &__contact {
+    display: flex;
+    align-items: center;
+    padding-right: 32px;
+    @include desktop {
+      margin: 16px 0px;
+    }
+    &-icon {
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 60px;
+      margin-right: 8px;
+      background-color: #242627;
+      @include mobile {
+        width: 50px;
+        height: 50px;
+      }
+    }
+    &-txt {
+      @include mobile {
+        font-size: 14px;
+      }
+    }
+  }
+}
